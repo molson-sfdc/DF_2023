@@ -1,6 +1,7 @@
 name: Pull Request
 #on: [pull_request]
-push:
+on:
+  push:
     branches:
       - 'setup-actions'
 jobs:
