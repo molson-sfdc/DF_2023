@@ -1,5 +1,8 @@
 name: Pull Request
-on: [pull_request]
+#on: [pull_request]
+push:
+    branches:
+      - 'setup-actions'
 jobs:
   static-analysis:
     runs-on: sfdc-ubuntu
@@ -7,6 +10,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          #ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.event.push.ref }}
           fetch-depth: 0
 
