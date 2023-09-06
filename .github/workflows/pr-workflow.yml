@@ -16,8 +16,8 @@ jobs:
           fetch-depth: 0
       - name: Install SFDX
         run: |
-          npm install --global sfdx-cli
-          sfdx --version
+          npm install @salesforce/cli --global
+          sf --version
       - name: Install Salesforce Code Analyzer 
         run: |
           sf plugins install @salesforce/sfdx-scanner
