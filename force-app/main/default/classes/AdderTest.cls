@@ -10,6 +10,6 @@ public with sharing class AdderTest {
      */
     @IsTest
     public static void testAdd() {
-        System.assertEquals(3, Adder.add(1,2));
+        System.assertEquals(3, Adder.add(1,2), 'Cannot Add!');
     }
 }
