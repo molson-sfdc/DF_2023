@@ -1,9 +1,6 @@
 name: Pull Request
-#on: [pull_request]
-on:
-  push:
-    branches:
-      - 'setup-actions'
+on: [pull_request]
+
 jobs:
   static-analysis:
     runs-on: ubuntu-latest
@@ -11,8 +8,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          #ref: ${{ github.event.pull_request.head.sha }}
-          ref: ${{ github.event.push.ref }}
+          ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
       - name: Install SFDX
         run: |
