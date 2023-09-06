@@ -18,5 +18,12 @@ jobs:
         run: |
           npm install --global sfdx-cli
           sfdx --version
+      - name: Install Salesforce Code Analyzer 
+        run: |
+          sf plugins install @salesforce/sfdx-scanner
+      - name: Run Salesforce Code Analyzer 
+        run: |
+          sf scanner run --target ".\**\*.cls" 
+          
 
 
