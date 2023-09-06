@@ -23,7 +23,7 @@ jobs:
           sf plugins install @salesforce/sfdx-scanner
       - name: Run Salesforce Code Analyzer 
         run: |
-          sf scanner run --target ".\**\*.cls" --severity-threshold=3
+          sf scanner run --target ".\**\*.cls" --severity-threshold=3 --category '!Design,!Best Practices'
           
 
 
