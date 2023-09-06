@@ -3,6 +3,6 @@ public with sharing class AdderTest {
 
     @IsTest
     public static void testAdder() {
-        //TODO Fix me
+        System.assertEquals(3, Adder.add(1,2));
     }
 }
