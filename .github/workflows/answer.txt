@@ -1,0 +1,1 @@
+System.assertEquals(3, Adder.add(1,2), 'Did we add');
