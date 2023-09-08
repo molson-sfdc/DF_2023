@@ -10,6 +10,7 @@ public with sharing class AdderTest {
      */
     @IsTest
     public static void testAdd() {
+        //Foo
         System.assertEquals(3, Adder.add(1,2), 'Did we add');
     }
 }
